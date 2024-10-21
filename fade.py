@@ -1,10 +1,10 @@
 import board
 import time
 from neopixel import NeoPixel
-
+import random
 
 np = NeoPixel(board.D2, 30, auto_write=False, brightness=0.3)
-
+i=0
 
 red = (255, 0, 0)
 green = (0,255,0)
@@ -15,6 +15,7 @@ magenta = (255, 0, 255)
 purple = (255, 127,0)
 orange = (255, 64, 0)
 
+color_list = [red, green, blue, yellow, cyan, magenta, purple, orange]
 def fade_in(color):
     red_ratio = color[0] / 50
     red_orig = color[0]
@@ -46,3 +47,10 @@ def fadeout(color):
      np.fill((red,green,blue))
      np.show()
      time.sleep(.05)
+
+fade_in(red)     
+fadeout(red)
+fade_in(green)     
+fadeout(green)
+fade_in(blue)     
+fadeout(blue)
