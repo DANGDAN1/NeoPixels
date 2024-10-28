@@ -41,11 +41,11 @@ def fade_in(color):
     blue_ratio = color[2] / 50
     blue_orig = color[2]
     for i in range(1,51):
-    red = red_orig + i * red_ratio
-    green = green_orig + i * green_ratio
-    blue = blue_orig + i * blue_ratio
-    np.fill((red, green, blue))
-    np.show()
-    time.sleep(.05)
+        red = red_orig + i * red_ratio
+        green = green_orig + i * green_ratio
+        blue = blue_orig + i * blue_ratio
+        np.fill((red, green, blue))
+        np.show()
+        time.sleep(.05)
      
- fade_in(orange)      
+fade_in(orange)
